@@ -17,7 +17,7 @@ export const Navigation = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="account"
+        initialRouteName="restaurants"
         tabBarOptions={{
           inactiveTintColor: "#646464",
           activeTintColor: "#00a680",
