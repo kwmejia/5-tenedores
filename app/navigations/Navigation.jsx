@@ -1,8 +1,13 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Favorites, TopRestaurants, Account, Search } from "../screens";
-import { RestaurantsStack } from "./";
+import {
+  RestaurantsStack,
+  FavoritesStack,
+  TopRestaurantsStack,
+  SearchStack,
+  AccountStack,
+} from "./";
 
 const Tab = createBottomTabNavigator();
 export const Navigation = () => {
@@ -17,22 +22,22 @@ export const Navigation = () => {
         />
         <Tab.Screen
           name="favorites"
-          component={Favorites}
+          component={FavoritesStack}
           options={{ title: "Favoritos" }}
         />
         <Tab.Screen
           name="top-restaurants"
-          component={TopRestaurants}
+          component={TopRestaurantsStack}
           options={{ title: "Top" }}
         />
         <Tab.Screen
           name="search"
-          component={Search}
+          component={SearchStack}
           options={{ title: "Buscar" }}
         />
         <Tab.Screen
           name="account"
-          component={Account}
+          component={AccountStack}
           options={{ title: "Cuenta" }}
         />
       </Tab.Navigator>
